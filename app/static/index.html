@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCENDANCY MVP</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header><h1>ASCENDANCY</h1><p>Strategy business board game MVP</p></header>
+    <main class="layout">
+      <section class="panel">
+        <h2>New Game Setup</h2>
+        <input id="players" value="Alice,Bob" />
+        <button id="createGame">Create + Start</button>
+        <p id="gameId"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Turn Controls</h2>
+        <div class="row">
+          <input id="steps" type="number" min="1" max="12" value="4" />
+          <select id="startChoice"><option value="money">Start: Money</option><option value="reputation">Start: Reputation</option></select>
+        </div>
+        <div class="row">
+          <button id="drawMain">Draw Main Card</button>
+          <button id="move">Move</button>
+          <button id="resolve">Resolve Square</button>
+          <button id="nextTurn">Next Turn</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Game Board (52)</h2>
+        <div id="board" class="board"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Player Stats</h2>
+        <pre id="playersView"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>Assets</h2>
+        <input id="assetId" placeholder="asset id e.g. prop_nyc_penthouse" />
+        <button id="buyAsset">Buy Asset/HQ</button>
+        <button id="upgradeAsset">Upgrade Asset</button>
+      </section>
+
+      <section class="panel">
+        <h2>Round + Presidency</h2>
+        <div class="row">
+          <button id="runPresident">Run for President</button>
+          <button id="policy">Use Policy</button>
+          <button id="lobbySmall">Lobby Small</button>
+          <button id="lobbyLarge">Lobby Large</button>
+        </div>
+        <pre id="metaView"></pre>
+      </section>
+
+      <section class="panel full">
+        <h2>Action Log</h2>
+        <pre id="logView"></pre>
+      </section>
+    </main>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
